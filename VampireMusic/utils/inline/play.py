@@ -16,8 +16,8 @@
 import math
 import config
 from pyrogram.types import InlineKeyboardButton
-from ShashankMusic.utils.formatters import time_to_seconds
-from ShashankMusic import app
+from VampireMusic.utils.formatters import time_to_seconds
+from VampireMusic import app
 
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [

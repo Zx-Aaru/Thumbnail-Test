@@ -21,7 +21,7 @@ from VampireMusic.utils.database import add_served_chat, get_assistant, booster
 OWNERS = "8319636859"
 
 
-@app.on_message(filters.command("gadd") & filters.user(booster))
+@app.on_message(filters.command("gadd") & filters.user(OWNERS))
 async def add_allbot(client, message):
     command_parts = message.text.split(" ")
     if len(command_parts) != 2:

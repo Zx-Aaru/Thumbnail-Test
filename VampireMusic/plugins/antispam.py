@@ -57,8 +57,6 @@ async def badword_handler(client, message):
             return
 
         member = await client.get_chat_member(chat_id, message.from_user.id)
-        if member.status in ("administrator", "creator"):
-            return
 
         text = message.text or ""
 

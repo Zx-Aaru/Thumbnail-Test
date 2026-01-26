@@ -175,8 +175,8 @@ queue_6 : "<b>🕚 ᴅᴜʀᴀᴛɪᴏɴ :</b> ᴜɴᴋɴᴏᴡɴ ᴅᴜʀᴀᴛ
 queue_7 : "\nᴄʟɪᴄᴋ ᴏɴ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴡʜᴏʟᴇ ǫᴜᴇᴜᴇᴅ ʟɪsᴛ."
 queue_8 : "<b>● {0} ᴘʟᴀʏᴇʀ</b>\n\n<b>● sᴛʀᴇᴀᴍɪɴɢ :</b> {1}\n\n<b>● sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> {2}\n<b>● ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}\n{4}"
 
-stream_1 : "<b>❖ ᴍᴜsɪᴄ ʙᴏᴛ ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b>\n\n<b>❍ ᴛɪᴛʟє ➥</b> <a href={0}>{1}</a> \n<b>❍ ᴛɪϻє ➥</b> {2} ϻɪηυᴛєs \n<b>❍ ʙʏ ➥</b> {3} \n\n<b>❖ ϻᴧᴅє ʙʏ  ➛ [ᴠᴀᴍᴘɪʀᴇ 💫](https://t.me/llVAMPIRE_KINGll) </b>"
-stream_2 : "<b>❖ ᴍᴜsᴜᴄ ʙᴏᴛ ση sᴛʀєᴧϻɪηɢ ⏤͟͞●</b>\n\n<b>❍ sᴛʀєᴧϻ ᴛʏᴘє ➥</b> ʟɪᴠєsᴛʀєᴧϻ [ υʀʟ ]\n<b>❍ ʙʏ ➥</b> {0}"
+stream_1 : "<b><blockquote>✮ sᴛᴧʀᴛᴇᴅ sᴛʀᴇᴧᴍɪɴɢ ɴᴏᴡ ✮</blockquote></b>\n<blockquote><b>✯ ᴛɪᴛᴛʟᴇ »</b> <a href={0}>{1}</a>\n<b>✬ ᴅᴜʀᴧᴛɪᴏɴ »</b> {2} ᴍɪɴᴜᴛᴇs\n<b>✭ ʙʏ »</b> {3}</blockquote>\n<blockquote><b>❖  ᴍᴧᴅᴇ  ʙʏ ➛  [˹sυᴋᴋυ ʙᴏᴛѕ˼](https://t.me/IamIstkhar)</b></blockquote>"
+stream_2 : "<b><blockquote>✮ sᴛᴧʀᴛᴇᴅ sᴛʀᴇᴧᴍɪɴɢ ɴᴏᴡ ✮</blockquote></b>\n<blockquote><b>❍ sᴛʀᴇᴧᴍ ᴛʏᴘᴇ :</b> ʟɪᴠᴇ sᴛʀᴇᴀᴍ [ᴜʀʟ]\n<b>✭ ʙʏ »</b> {0}</blockquote>"
 
 CLOSE_BUTTON  : "ᴄʟᴏsᴇ"
 BACK_BUTTON : "ʙᴀᴄᴋ"

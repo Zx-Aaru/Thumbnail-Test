@@ -17,20 +17,20 @@ from pytgcalls import PyTgCalls, exceptions, types
 from pytgcalls.pytgcalls_session import PyTgCallsSession
 
 import config
-from AloneMusic import LOGGER, YouTube, app
-from AloneMusic.misc import db
-from AloneMusic.utils.database import (add_active_chat, add_active_video_chat,
+from VampireMusic import LOGGER, YouTube, app
+from VampireMusic.misc import db
+from VampireMusic.utils.database import (add_active_chat, add_active_video_chat,
                                        get_lang, get_loop, group_assistant,
                                        is_autoend, music_on,
                                        remove_active_chat,
                                        remove_active_video_chat, set_loop)
-from AloneMusic.utils.errors import capture_internal_err
-from AloneMusic.utils.exceptions import AssistantErr
-from AloneMusic.utils.formatters import (check_duration, seconds_to_min,
+from VampireMusic.utils.errors import capture_internal_err
+from VampireMusic.utils.exceptions import AssistantErr
+from VampireMusic.utils.formatters import (check_duration, seconds_to_min,
                                          speed_converter)
-from AloneMusic.utils.inline.play import stream_markup
-from AloneMusic.utils.stream.autoclear import auto_clean
-from AloneMusic.utils.thumbnails import get_thumb
+from VampireMusic.utils.inline.play import stream_markup
+from VampireMusic.utils.stream.autoclear import auto_clean
+from VampireMusic.utils.thumbnails import get_thumb
 from strings import get_string
 
 
@@ -601,4 +601,4 @@ class Call(PyTgCalls):
                         await self.stop_stream(update.chat_id)
 
 
-Alone = Call()
+Vampire = Call()

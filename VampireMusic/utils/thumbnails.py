@@ -18,7 +18,7 @@ import random
 import aiofiles
 import aiohttp
 from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
-from youtubesearchpython.__future__ import VideosSearch
+from py_yt import VideosSearch
 from config import YOUTUBE_IMG_URL
 from VampireMusic import app
 
@@ -172,7 +172,7 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     )
 
     # === BRANDING (BLACK) ===
-    brand = "DEV :- Vampire King"
+    brand = "DEV :- "Istkhar King"
     w = tag_font.getlength(brand)
     draw.text((1280 - w - 50, 680), brand, fill=(0, 0, 0), font=tag_font)
 

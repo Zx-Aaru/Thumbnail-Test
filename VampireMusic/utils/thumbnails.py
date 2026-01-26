@@ -172,7 +172,7 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     )
 
     # === BRANDING (BLACK) ===
-    brand = "DEV :- "Istkhar King"
+    brand = "DEV :- " Istkhar King "
     w = tag_font.getlength(brand)
     draw.text((1280 - w - 50, 680), brand, fill=(0, 0, 0), font=tag_font)
 

@@ -17,10 +17,10 @@ from VampireMusic.utils.database import (add_active_chat, add_active_video_chat,
                                        is_autoend, music_on,
                                        remove_active_chat,
                                        remove_active_video_chat, set_loop)
-from ROCKYMUSIC.utils.exceptions import AssistantErr
-from ROCKYMUSIC.utils.formatters import check_duration, seconds_to_min, speed_converter
-from ROCKYMUSIC.utils.inline.play import stream_markup
-from ROCKYMUSIC.utils.stream.autoclear import auto_clean
+from VampireMusic.utils.exceptions import AssistantErr
+from VampireMusic.utils.formatters import check_duration, seconds_to_min, speed_converter
+from VampireMusic.utils.inline.play import stream_markup
+from VampireMusic.utils.stream.autoclear import auto_clean
 from VampireMusic.utils.thumbnails import get_thumb
 from strings import get_string
 

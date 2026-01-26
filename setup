@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 pprint (){
@@ -104,7 +105,7 @@ pprint "\nAPI HASH: "; color_reset; read api_hash
 pprint "\nBOT TOKEN: "; color_reset; read bot_token
 pprint "\nOWNER ID:"; color_reset; read ownid
 pprint "\nMONGO DB URI: "; color_reset; read mongo_db
-pprint "\nLOG GROUP ID: "; color_reset; read logger
+pprint "\nLOGGER ID: "; color_reset; read logger
 pprint "\nSTRING SESSION: "; color_reset; read string_session
 
 pprint "\n\nProcessing your vars, wait a while !" "cgreen"

@@ -107,7 +107,6 @@ class Call(PyTgCalls):
             ffmpeg_parameters=ffmpeg,
         )
 
-    @capture_internal_err
     async def _play_on_assistant(
         self,
         client: PyTgCalls,
@@ -129,19 +128,19 @@ class Call(PyTgCalls):
         except Exception:
             raise
 
-    @capture_internal_err
+    
     async def pause_stream(self, chat_id: int):
         await delete_old_message(chat_id)
         assistant = await group_assistant(self, chat_id)
         await assistant.pause(chat_id)
 
-    @capture_internal_err
+  
     async def resume_stream(self, chat_id: int):
         await delete_old_message(chat_id)
         assistant = await group_assistant(self, chat_id)
         await assistant.resume(chat_id)
 
-    @capture_internal_err
+    
     async def stop_stream(self, chat_id: int):
         await delete_old_message(chat_id)
         assistant = await group_assistant(self, chat_id)
@@ -151,7 +150,7 @@ class Call(PyTgCalls):
         except Exception:
             pass
 
-    @capture_internal_err
+
     async def stop_stream_force(self, chat_id: int):
         for string, client in [
             (config.STRING1, self.one),
@@ -171,7 +170,7 @@ class Call(PyTgCalls):
         except Exception:
             pass
 
-    @capture_internal_err
+  
     async def speedup_stream(self, chat_id: int, file_path, speed, playing):
         assistant = await group_assistant(self, chat_id)
         if str(speed) != "1.0":
@@ -245,7 +244,7 @@ class Call(PyTgCalls):
         except Exception:
             pass
 
-    @capture_internal_err
+  
     async def skip_stream(
         self,
         chat_id: int,
@@ -257,7 +256,7 @@ class Call(PyTgCalls):
         stream = self._build_stream(link, video=bool(video))
         await self._play_on_assistant(assistant, chat_id, stream)
 
-    @capture_internal_err
+  
     async def seek_stream(self, chat_id, file_path, to_seek, duration, mode):
         assistant = await group_assistant(self, chat_id)
         ffmpeg = f"-ss {to_seek} -to {duration}"
@@ -269,7 +268,7 @@ class Call(PyTgCalls):
         )
         await self._play_on_assistant(assistant, chat_id, stream)
 
-    @capture_internal_err
+    
     async def stream_call(self, link):
         assistant = await group_assistant(self, config.LOGGER_ID)
         stream = self._build_stream(link, video=True)
@@ -280,7 +279,7 @@ class Call(PyTgCalls):
         except Exception:
             pass
 
-    @capture_internal_err
+    
     async def join_call(
         self,
         chat_id: int,
@@ -313,7 +312,7 @@ class Call(PyTgCalls):
             if users == 1:
                 autoend[chat_id] = datetime.now() + timedelta(minutes=1)
 
-    @capture_internal_err
+  
     async def change_stream(self, client: PyTgCalls, chat_id: int):
         await delete_old_message(chat_id)
         check = db.get(chat_id)
@@ -537,7 +536,7 @@ class Call(PyTgCalls):
                 db[chat_id][0]["mystic"] = run
                 db[chat_id][0]["markup"] = "stream"
 
-    @capture_internal_err
+    
     async def ping(self):
         pings = []
         if config.STRING1:
@@ -552,7 +551,7 @@ class Call(PyTgCalls):
             pings.append(self.five.ping)
         return str(round(sum(pings) / len(pings), 3)) if pings else "0"
 
-    @capture_internal_err
+    
     async def start(self):
         LOGGER(__name__).info("Starting PyTgCalls Client...\n")
         if config.STRING1:
@@ -566,7 +565,7 @@ class Call(PyTgCalls):
         if config.STRING5:
             await self.five.start()
 
-    @capture_internal_err
+    
     async def decorators(self):
         for string, client in [
             (config.STRING1, self.one),

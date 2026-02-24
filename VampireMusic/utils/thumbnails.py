@@ -1,17 +1,3 @@
-# -----------------------------------------------
-# 🔸 VampireMusic Project
-# 🔹 Developed & Maintained by: Vampire Bots (https://github.com/TEAM-VAMPIRE-OP)
-# 📅 Copyright © 2025 – All Rights Reserved
-#
-# 📖 License:
-# This source code is open for educational and non-commercial use ONLY.
-# You are required to retain this credit in all copies or substantial portions of this file.
-# Commercial use, redistribution, or removal of this notice is strictly prohibited
-# without prior written permission from the author.
-#
-# ❤️ Made with dedication and love by TEAM-VAMPIRE-OP
-# -----------------------------------------------
-
 import os
 import re
 import random
@@ -53,7 +39,7 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     if os.path.exists(cache_path):
         return cache_path
 
-    # === Fetch Video Info ===
+
     try:
         results = VideosSearch(f"https://www.youtube.com/watch?v={videoid}", limit=1)
         search = await results.next()
@@ -78,13 +64,12 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     except:
         return YOUTUBE_IMG_URL
 
-    # === Smooth Blurred Background ===
+    
     bg = Image.open(thumb_path).resize((1280, 720)).convert("RGB")
     bg = bg.filter(ImageFilter.GaussianBlur(30)).convert("RGBA")
     overlay = Image.new("RGBA", (1280, 720), (255, 255, 255, 40))
     bg = Image.alpha_composite(bg, overlay)
 
-    # === HEXAGON CUT THUMBNAIL ===
     thumb = Image.open(thumb_path).resize((520, 520)).convert("RGBA")
 
     hex_points = [
@@ -103,31 +88,23 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     hex_thumb = Image.new("RGBA", (520, 520), (0, 0, 0, 0))
     hex_thumb.paste(thumb, (0, 0), mask)
 
-    # ===========================================
-    # ⭐ 3D HEXAGON EFFECT + PINK BORDER
-    # ===========================================
     border_img = Image.new("RGBA", (600, 600), (0, 0, 0, 0))
     d = ImageDraw.Draw(border_img)
     offset = 40
 
     border_hex = [(x + offset, y + offset) for x, y in hex_points]
 
-    # 3D EFFECT (dark inner edge)
     d.polygon(border_hex, outline=(90, 0, 60, 255), width=26)
 
-    # 3D EFFECT (light highlight outer)
     d.polygon(border_hex, outline=(255, 100, 200, 180), width=10)
 
-    # Main Thick Pink Border
     d.polygon(border_hex, outline=(255, 40, 150, 255), width=16)
 
-    # PLACE BORDER + THUMB
     bg.paste(border_img, (60, 60), border_img)
     bg.paste(hex_thumb, (100, 100), hex_thumb)
 
     draw = ImageDraw.Draw(bg)
 
-    # === FONTS ===
     try:
         title_font = ImageFont.truetype("VampireMusic/assets/font.ttf", 44)
         meta_font = ImageFont.truetype("VampireMusic/assets/font.ttf", 26)
@@ -135,13 +112,11 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     except:
         title_font = meta_font = tag_font = ImageFont.load_default()
 
-    # === TITLE (Red) ===
     title_x = 700
     title_y = 180
     title_text = trim_to_width(title, title_font, 480)
     draw.text((title_x, title_y), title_text, fill=(0, 0, 0), font=title_font)
 
-    # === META (yellow) ===
     meta = (
         f"YouTube | {views}\n"
         f"Duration | {duration_text}\n"
@@ -154,8 +129,7 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
         spacing=10,
         font=meta_font
     )
-
-    # === PROGRESS BAR ===
+    
     bar_y = title_y + 240
     bar_w = 390
 
@@ -171,7 +145,6 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
         fill=(0, 0, 0)
     )
 
-    # === BRANDING (yellow) ===
     brand = "DEV :- OXYGEN OP"
     w = tag_font.getlength(brand)
     draw.text((1280 - w - 50, 680), brand, fill=(0, 0, 0), font=tag_font)

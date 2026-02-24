@@ -52,13 +52,13 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 # ✅ Git & Upstream Repo
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/ISTKHAR-CODER786/Syn")
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/opk00637-glitch/Badnamxd")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", "")  # Only for private repo
 
 # ✅ Support Links
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/VAMPIRE_PROMOTION")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/llTEAM_VAMPIREll")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/kriti_update")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/kriti_update")
 
 # YT-API 
 API_URL = getenv("API_URL", 'https://api.nexgenbots.xyz') #youtube song url

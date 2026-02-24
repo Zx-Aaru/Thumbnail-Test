@@ -135,13 +135,13 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
     except:
         title_font = meta_font = tag_font = ImageFont.load_default()
 
-    # === TITLE (RED) ===
+    # === TITLE (Red) ===
     title_x = 700
     title_y = 180
     title_text = trim_to_width(title, title_font, 480)
     draw.text((title_x, title_y), title_text, fill=(0, 0, 0), font=title_font)
 
-    # === META (YELLOW) ===
+    # === META (yellow) ===
     meta = (
         f"YouTube | {views}\n"
         f"Duration | {duration_text}\n"
@@ -171,7 +171,7 @@ async def get_thumb(videoid: str, player_username: str = None) -> str:
         fill=(0, 0, 0)
     )
 
-    # === BRANDING (YELLOW) ===
+    # === BRANDING (yellow) ===
     brand = "DEV :- OXYGEN OP"
     w = tag_font.getlength(brand)
     draw.text((1280 - w - 50, 680), brand, fill=(0, 0, 0), font=tag_font)

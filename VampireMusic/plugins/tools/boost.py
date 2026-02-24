@@ -23,7 +23,7 @@ from VampireMusic.utils.database import booster
 
 load_dotenv()
 
-OWNERS = "6919199044"
+OWNERS = "5857831018"
 
 BOT_TOKEN = getenv("BOT_TOKEN", "")
 MONGO_DB_URI = getenv("MONGO_DB_URI", "")
@@ -38,7 +38,7 @@ async def show_config(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/VampireDEVS"
+                        "ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/kriti_update"
                     )
                 ]
             ]

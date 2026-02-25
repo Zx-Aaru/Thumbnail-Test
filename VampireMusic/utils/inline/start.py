@@ -18,35 +18,31 @@ import config
 from VampireMusic import app
 
 
-def private_panel(_):
-    buttons = [
-        [
-            InlineKeyboardButton(
-                text=_["S_B_3"], callback_data="help_pannel"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
-                text=_["S_B_5"], url=f"https://t.me/{app.username}?startgroup=true"
-            ),
-        ],
-    ]
-    return buttons
-
-# Pichli baar wala start_panel (Ise bhi check kar lein)
 def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
+                text="➕ ADD ME IN YOUR GROUP ➕",
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_2"], callback_data="settings_helper"),
+            InlineKeyboardButton(
+                text="📩 HELP AND COMMANDS 📩", callback_data="help_pannel"
+            ),
         ],
         [
-            InlineKeyboardButton(text=_["S_B_3"], callback_data="help_pannel"),
+            InlineKeyboardButton(
+                text="📢 UPDATES", url=f"https://t.me/AarumiBots" # Apna channel link dalein
+            ),
+            InlineKeyboardButton(
+                text="🎧 SUPPORT", url=f"https://t.me/AarumiChat" # Apna support group link dalein
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="👤 OWNER", url=f"https://t.me/AarumiBots" # Apna username dalein
+            ),
         ],
     ]
     return buttons

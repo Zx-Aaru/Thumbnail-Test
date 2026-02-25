@@ -22,28 +22,40 @@ def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
+                text=_["S_B_1"], url=f"https://t.me/{app.username}?startgroup=true"
+            ),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+        ],
+    ]
+    return buttons
+
+def private_panel(_):
+    buttons = [
+        [
+            InlineKeyboardButton(
                 text="➕ ADD ME IN YOUR GROUP ➕",
                 url=f"https://t.me/{app.username}?startgroup=true",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="📩 HELP AND COMMANDS 📩", callback_data="help_pannel"
+                text="📩 HELP AND COMMANDS 📩", callback_data="settings_back_helper"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="📢 UPDATES", url=f"https://t.me/AarumiBots" # Apna channel link dalein
+                text="📢 UPDATES", url=config.SUPPORT_CHANNEL
             ),
             InlineKeyboardButton(
-                text="🎧 SUPPORT", url=f"https://t.me/AarumiChat" # Apna support group link dalein
+                text="🎧 SUPPORT", url=config.SUPPORT_CHAT
             ),
         ],
         [
             InlineKeyboardButton(
-                text="👤 OWNER", url=f"https://t.me/AarumiBots" # Apna username dalein
+                text="👤 OWNER", url=f"tg://openmessage?user_id={config.OWNER_ID}"
             ),
         ],
     ]
     return buttons
-    

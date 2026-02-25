@@ -18,7 +18,7 @@ import config
 from VampireMusic import app
 
 
-def private_panel(_):
+def start_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
